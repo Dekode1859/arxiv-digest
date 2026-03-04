@@ -1,0 +1,19 @@
+# arxiv-digest configuration
+
+# Categories to search (comma-separated)
+categories: cs.AI, cs.LG, cs.CL, stat.ML
+
+# Max papers to fetch per run
+max_papers: 10
+
+# Output directory for markdown files
+output_dir: papers
+
+# Sort by: submittedDate (most recent) or relevance
+sort_by: submittedDate
+
+# arxiv API settings
+arxiv_base_url: http://export.arxiv.org/api/query
+
+# SilverBullet space path (auto-copy to SilverBullet if set)
+silverbullet_space: /var/lib/docker/volumes/silverbullet_silverbullet_space/_data
