@@ -173,6 +173,14 @@ def main():
         sb_path.write_text(md_content)
         print(f"✅ Copied to SilverBullet: {sb_path}")
     
+    # Copy to MkDocs docs folder if configured
+    mkdocs_dir = config.get("mkdocs_docs_dir")
+    if mkdocs_dir:
+        mkdocs_path = Path(mkdocs_dir) / "papers" / filename
+        mkdocs_path.parent.mkdir(parents=True, exist_ok=True)
+        mkdocs_path.write_text(md_content)
+        print(f"✅ Copied to MkDocs: {mkdocs_path}")
+    
     print(f"📄 {len(papers)} papers written")
 
 

@@ -13,6 +13,9 @@ output_filename: "arxiv-digest-{date}.md"
 # SilverBullet space path (auto-copy to SilverBullet if set)
 silverbullet_space: /var/lib/docker/volumes/silverbullet_silverbullet_space/_data
 
+# MkDocs docs directory
+mkdocs_docs_dir: /root/.openclaw/workspace/arxiv-digest/docs
+
 # LLM Configuration
 llm:
   # Ollama model to use
