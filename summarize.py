@@ -137,6 +137,36 @@ def call_llm(prompt: str, config: dict) -> Dict[str, Any]:
         return {}
 
 
+def should_include_paper(paper: Dict[str, Any], config: dict) -> bool:
+    """Check if paper matches focus areas or filter categories."""
+    focus_areas = config.get("focus_areas", [])
+    filter_cats = config.get("filter_categories", "")
+    
+    # Check filter categories (arXiv categories)
+    paper_cats = paper.get("categories", "").lower()
+    if filter_cats:
+        for fc in filter_cats.split(","):
+            fc = fc.strip()
+            if fc.lower() in paper_cats:
+                return True
+    
+    # Check if subcategory or tags match focus areas
+    subcategory = paper.get("subcategory", "").lower()
+    tags = [t.lower() for t in paper.get("tags", [])]
+    
+    for fa in focus_areas:
+        fa_lower = fa.lower()
+        # Check subcategory
+        if subcategory and fa_lower in subcategory:
+            return True
+        # Check tags
+        for tag in tags:
+            if fa_lower in tag or tag in fa_lower:
+                return True
+    
+    return False
+
+
 def process_paper(paper: Dict[str, Any], config: dict) -> Dict[str, Any]:
     """Process a single paper with LLM."""
     title = paper["title"]
@@ -258,9 +288,20 @@ def main():
             print(f"Error processing paper: {e}")
             enriched_papers.append(paper)
     
+    # Filter to focus areas
+    print("\nFiltering to focus areas...")
+    filtered_papers = [p for p in enriched_papers if should_include_paper(p, config)]
+    filtered_count = len(enriched_papers) - len(filtered_papers)
+    print(f"Filtered out {filtered_count} papers (not matching focus areas)")
+    print(f"Keeping {len(filtered_papers)} papers")
+    
+    if not filtered_papers:
+        print("No papers match focus areas!")
+        return
+    
     # Generate enriched markdown
     print("\nGenerating enriched markdown...")
-    md_content = generate_enriched_markdown(enriched_papers, config)
+    md_content = generate_enriched_markdown(filtered_papers, config)
     
     # Save to file
     output_dir = config.get("output_dir", "papers")

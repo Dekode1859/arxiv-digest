@@ -1,7 +1,8 @@
 # arxiv-digest configuration
 
 # Categories to search (comma-separated)
-categories: cs.AI, cs.LG, cs.CL, stat.ML
+# Default to cs.AI (AI) and cs.CL (Computation and Language) for agent/LLM focus
+categories: cs.AI, cs.CL
 
 # Max papers to fetch per run
 max_papers: 10
@@ -20,7 +21,8 @@ llm:
   # Temperature for summarization (0 = factual, 0.7 = creative)
   temperature: 0.3
 
-# Focus areas for subcategory detection (ordered by priority)
+# Focus areas - only papers matching these will be included in final digest
+# Papers that don't match will be filtered out
 focus_areas:
   - agents
   - llms
@@ -28,12 +30,15 @@ focus_areas:
   - benchmarking
   - evaluation
   - reasoning
-  - multimodal
-  - computer_vision
-  - nlp
-  - robotics
-  - reinforcement_learning
-  - generative_models
+  - multi_agent
+  - agentic
+  - autonomous
+  - tool_use
+  - code_generation
+  - reasoning
+
+# Also include papers from these arXiv categories
+filter_categories: cs.AI, cs.CL
 
 # Main categories (extensible)
 main_categories:

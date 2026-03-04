@@ -1,216 +1,220 @@
 # arXiv AI Digest
 
-**Generated:** 2026-03-04 at 18:10:37 
+**Generated:** 2026-03-04 at 18:23:14 
 
-**Categories:** cs.AI, cs.LG, cs.CL, stat.ML
+**Categories:** cs.AI, cs.CL
 
 **Total Papers:** 10
 
 ---
 
-### 1. 1. CFG-Ctrl: Control-Based Classifier-Free Diffusion Guidance
-
-- **arXiv:** [2603.03281v1](https://arxiv.org/abs/2603.03281v1) | [PDF](https://arxiv.org/pdf/2603.03281v1)
-- **Published:** ** 2026-03-03
-- **Category:** method (generative_models)
-- **Tags:** diffusion-models, classifier-free-guidance, CFG, flow-matching, control-theory, semantic-alignment, velocity-field, generative-flow
-
-**Summary:**
-This paper introduces CFG-Ctrl, a unified framework that reinterprets Classifier-Free Guidance (CFG) as a control mechanism applied to continuous-time flow-based diffusion models. The approach uses the difference between conditional and unconditional predictions as an error signal to adjust the velocity field, effectively treating CFG as a proportional controller.
-
-**Implementation:**
-['Reinterprets CFG as control applied to first-order continuous-time generative flow', 'Uses conditional-unconditional discrepancy as error signal to adjust velocity field', 'Frames vanilla CFG as proportional controller (P-control) with fixed gain', 'Unified framework for understanding and extending CFG methods']
-
-**Applications:**
-- Image generation with improved semantic control
-- Text-to-image generation
-- Controlled synthesis in diffusion models
-
----
-
-### 2. 2. How to Peel with a Knife: Aligning Fine-Grained Manipulation with Human Preference
+### 1. 1. How to Peel with a Knife: Aligning Fine-Grained Manipulation with Human Preference
 
 - **arXiv:** [2603.03280v1](https://arxiv.org/abs/2603.03280v1) | [PDF](https://arxiv.org/pdf/2603.03280v1)
 - **Published:** ** 2026-03-03
 - **Category:** method (robotics)
-- **Tags:** fine-grained manipulation, human preference alignment, force-sensitive robotics, implicit success criteria, reward engineering, contact-rich dynamics, learning from human feedback
+- **Tags:** fine-grained manipulation, human preference alignment, reinforcement learning, reward engineering, contact-rich dynamics, force-sensitive tasks, robot manipulation
 
 **Summary:**
-This paper addresses challenging manipulation tasks like food preparation, surgery, and craftsmanship that require both contact-rich physical interactions and subjective quality evaluation. The authors present a learning framework that aligns robotic fine-grained manipulation with human preferences, enabling robots to perform tasks where success is continuous and subjective rather than binary.
+This paper addresses the challenge of teaching robots to perform complex manipulation tasks like food preparation (e.g., peeling potatoes), surgery, and craftsmanship that require subtle force control and have subjective quality criteria. The authors present a learning framework that aligns robot behavior with human preferences rather than relying on explicit reward functions, making it suitable for tasks where success is continuous and subjective rather than binary.
 
 **Implementation:**
-The framework focuses on implicit success criteria that are difficult to evaluate quantitatively. It uses learning-based approaches to capture human preferences for quality assessment in force-sensitive, contact-rich manipulation tasks. The method likely involves reward learning or preference modeling to handle the continuous, subjective nature of task quality (e.g., how well a potato is peeled).
+The framework uses learning-based methods to handle contact-rich, force-sensitive dynamics. It incorporates human preference alignment to define 'implicit' success criteria for continuous-valued quality assessment (e.g., how well a potato is peeled), avoiding the difficulty of manual reward engineering for subjective tasks.
 
 **Applications:**
 - Food preparation and cooking automation
 - Surgical robotics
 - Craftsmanship and manufacturing
-- Assembly tasks requiring fine motor control
+- Fine-grained manipulation tasks requiring force control
 
 ---
 
-### 3. 3. Tether: Autonomous Functional Play with Correspondence-Driven Trajectory Warping
+### 2. 2. Tether: Autonomous Functional Play with Correspondence-Driven Trajectory Warping
 
 - **arXiv:** [2603.03278v1](https://arxiv.org/abs/2603.03278v1) | [PDF](https://arxiv.org/pdf/2603.03278v1)
 - **Published:** ** 2026-03-03
 - **Category:** application (robotics)
-- **Tags:** autonomous_learning, trajectory_planning, motion_control, reinforcement_learning, human_robot_interaction, play-based_learning, imitation_learning
+- **Tags:** autonomous_learning, trajectory_warping, play_based_learning, policy_learning, interaction, task_directed
 
 **Summary:**
-Tether is a robotics method for enabling autonomous functional play, where robots learn through structured, task-directed interaction. It addresses key challenges in robot learning by creating policies robust to diverse and out-of-distribution environment states, while also providing a continuous procedure for generating useful robot experience without requiring extensive human demonstrations.
+Tether is a robotics method for autonomous functional play that enables robots to learn from their own interactions and experiences. It addresses two key challenges: creating policies robust to diverse, out-of-distribution environment states and continuously producing useful robot experience. The approach uses correspondence-driven trajectory warping to structure task-directed interactions, offering a scalable alternative to labor-intensive human demonstrations.
 
 **Implementation:**
-Uses correspondence-driven trajectory warping to adapt learned behaviors to new situations. The method enables robots to conduct self-supervised learning through play, with a focus on functional interactions that are task-directed. It handles out-of-distribution environment states through robust policy design.
+The method uses correspondence-driven trajectory warping to adapt learned behaviors to new situations, enabling robust policy execution across diverse states. It implements structured, task-directed interactions that allow continuous generation of useful robot experience without human intervention.
 
 **Applications:**
 - Robot skill learning through autonomous exploration
-- Scalable robot training without human demonstrations
-- Adaptive robotic manipulation in changing environments
+- Scalable robot training reducing reliance on human demonstrations
+- Industrial automation with adaptive robotic policies
 
 ---
 
-### 4. 4. Learning Demographic-Conditioned Mobility Trajectories with Aggregate Supervision
-
-- **arXiv:** [2603.03275v1](https://arxiv.org/abs/2603.03275v1) | [PDF](https://arxiv.org/pdf/2603.03275v1)
-- **Published:** ** 2026-03-03
-- **Category:** method (generative_models)
-- **Tags:** mobility_trajectories, demographic_conditioning, weakly_supervised_learning, aggregate_supervision, trajectory_generation
-
-**Summary:**
-ATLAS is a weakly supervised machine learning approach that generates demographic-conditioned mobility trajectories without requiring explicit demographic labels on individual data. It uses aggregate supervision to learn how different demographic groups exhibit distinct mobility patterns, addressing the common problem of missing demographic labels in trajectory datasets.
-
-**Implementation:**
-Weakly supervised learning framework using aggregate (population-level) demographic information rather than individual-level labels. Conditions trajectory generation on demographic attributes to capture mobility heterogeneity across different population groups. Addresses data scarcity issue where individual trajectories lack demographic annotations.
-
-**Applications:**
-- Public health monitoring and disease spread modeling
-- Urban planning and transportation infrastructure design
-- Social science research on demographic behavior patterns
-- Epidemiological studies tracking population movement
-
----
-
-### 5. 5. Gravity Falls: A Comparative Analysis of Domain-Generation Algorithm (DGA) Detection Methods for Mobile Device Spearphishing
-
-- **arXiv:** [2603.03270v1](https://arxiv.org/abs/2603.03270v1) | [PDF](https://arxiv.org/pdf/2603.03270v1)
-- **Published:** ** 2026-03-03
-- **Category:** benchmark (None)
-- **Tags:** DGA detection, mobile security, smishing, phishing detection, cybersecurity, domain generation algorithms, spearphishing, malware detection, comparative analysis
-
-**Summary:**
-This paper evaluates how well Domain Generation Algorithm (DGA) detectors work for detecting smishing (SMS spearphishing) attacks on mobile devices, addressing a gap in research that primarily focuses on malware C2 and email phishing. The authors compare traditional and machine-learning based DGA detection methods to determine their effectiveness against mobile-specific domain tactics used by threat actors.
-
-**Implementation:**
-The study evaluates DGA detection methods against smishing-driven domain tactics outside enterprise perimeters. It compares traditional detection approaches with machine-learning based detectors to assess generalization capabilities. The research focuses on mobile device spearphishing scenarios where DGAs are used to rotate hostile infrastructure.
-
-**Applications:**
-- Mobile device security monitoring
-- SMS/phishing threat detection
-- Endpoint protection for mobile devices
-- Threat intelligence for mobile-first security solutions
-
----
-
-### 6. 6. LoGeR: Long-Context Geometric Reconstruction with Hybrid Memory
-
-- **arXiv:** [2603.03269v1](https://arxiv.org/abs/2603.03269v1) | [PDF](https://arxiv.org/pdf/2603.03269v1)
-- **Published:** ** 2026-03-03
-- **Category:** architecture (computer_vision)
-- **Tags:** 3d_reconstruction, long_context, video_understanding, geometric_foundation_models, hybrid_memory, neural_architecture
-
-**Summary:**
-
-
-**Implementation:**
-
-
-**Applications:**
-
-
----
-
-### 7. 7. Physics-informed post-processing of stabilized finite element solutions for transient convection-dominated problems
-
-- **arXiv:** [2603.03259v1](https://arxiv.org/abs/2603.03259v1) | [PDF](https://arxiv.org/pdf/2603.03259v1)
-- **Published:** ** 2026-03-03
-- **Category:** method (None)
-- **Tags:** finite_element_methods, physics_informed_neural_networks, convection_dominated_problems, numerical_pdes, stabilization_techniques, post_processing, computational_physics, transient_problems
-
-**Summary:**
-This paper addresses numerical challenges in simulating convection-dominated transport phenomena with sharp gradients and propagating fronts. It proposes a physics-informed neural network (PINN) post-processing approach to enhance stabilized finite element methods that struggle with localized steep layers, improving solution accuracy without retraining the original simulation.
-
-**Implementation:**
-The method uses physics-informed neural networks to post-process stabilized finite element solutions for transient convection-dominated problems. It applies additional regularization to resolve localized steep layers that stabilized methods alone cannot capture accurately. The approach leverages known physical constraints to improve solution quality.
-
-**Applications:**
-- Computational fluid dynamics
-- Heat transfer simulations
-- Transport phenomena modeling
-- Chemical engineering processes
-- Atmospheric and oceanographic modeling
-
----
-
-### 8. 8. Inherited Goal Drift: Contextual Pressure Can Undermine Agentic Goals
+### 3. 3. Inherited Goal Drift: Contextual Pressure Can Undermine Agentic Goals
 
 - **arXiv:** [2603.03258v1](https://arxiv.org/abs/2603.03258v1) | [PDF](https://arxiv.org/pdf/2603.03258v1)
 - **Published:** ** 2026-03-03
 - **Category:** method (agents)
-- **Tags:** goal_drift, agents, llms, evaluation, benchmarking, long_context
+- **Tags:** goal_drift, LLM_agents, agent_safety, behavior_analysis, evaluation, contextual_pressure, long_context
 
 **Summary:**
-This paper investigates 'goal drift' in modern language model agents - the tendency for AI agents to gradually deviate from their original objectives over time. The researchers examine whether state-of-the-art models are susceptible to this phenomenon and identify contextual pressures as a key factor that can undermine agentic goals. The work provides an updated characterization of how and why goal drift occurs in advanced AI systems.
+This paper investigates 'goal drift' in language model agents—where agents gradually deviate from their original objectives over time. The researchers examine whether modern, state-of-the-art language models are still susceptible to this phenomenon, which has implications for deploying LMs in long-context, agentic tasks. The study focuses on how contextual pressures can inadvertently cause agents to abandon their initial goals.
 
 **Implementation:**
-The study examines goal drift in state-of-the-art language models deployed as agents in long-context tasks. It investigates the extent and causes of drift, focusing on contextual pressures that may lead agents to abandon or modify their original objectives. The research updates previous findings about prior-generation language model agents to determine if newer models remain vulnerable to this issue.
+The paper provides an updated characterization of goal drift in state-of-the-art language models, examining the extent and underlying causes of drift. It appears to involve testing agents in long-context scenarios to observe how original objectives are maintained or compromised over extended interactions. The research likely compares different model architectures and prompting strategies to identify factors that influence drift susceptibility.
 
 **Applications:**
-- Autonomous AI assistants for complex multi-step tasks
-- Long-horizon task automation
-- AI coding assistants and development tools
-- Personal AI assistants managing schedules and tasks
+- Autonomous AI assistants handling long-term tasks
+- Code generation and debugging agents
+- Research and analysis agents conducting extended investigations
+- Customer service bots managing multi-turn conversations
 
 ---
 
-### 9. 9. Valet: A Standardized Testbed of Traditional Imperfect-Information Card Games
+### 4. 4. Valet: A Standardized Testbed of Traditional Imperfect-Information Card Games
 
 - **arXiv:** [2603.03252v1](https://arxiv.org/abs/2603.03252v1) | [PDF](https://arxiv.org/pdf/2603.03252v1)
 - **Published:** ** 2026-03-03
-- **Category:** benchmark (benchmarking)
-- **Tags:** imperfect-information games, card games, game AI, evaluation, testbed, multi-agent systems
+- **Category:** benchmark (agents)
+- **Tags:** imperfect_information, card_games, game_playing, benchmark, evaluation, reinforcement_learning, multi_agent
 
 **Summary:**
-Valet is a standardized testbed introduced to address the difficulty of comparing AI algorithms across different imperfect-information games. It consists of 21 traditional card games, providing a diverse and comprehensive benchmark for evaluating the robustness of game-playing algorithms. The testbed facilitates comparative research on imperfect-information game-playing by offering a common framework.
+Valet is a standardized testbed containing 21 traditional imperfect-information card games designed to help researchers compare AI algorithms across different games. The testbed addresses the problem that AI performance is typically evaluated on individual games, making it difficult to assess how robust algorithms are when facing different game structures and challenges.
 
 **Implementation:**
-Valet includes 21 traditional imperfect-information card games with varying complexity levels, designed to test algorithms across different aspects like hidden information, stochastic draws, and strategic depth. The testbed provides standardized interfaces, game rules, and evaluation metrics to enable fair comparison between different AI approaches.
+The testbed includes 21 diverse traditional imperfect-information card games featuring hidden hands and stochastic card draws. Valet provides a standardized framework for comparative research on game-playing algorithms, enabling systematic evaluation of AI robustness across different game types.
 
 **Applications:**
-- Poker AI and strategic decision-making systems
-- Business negotiations and auctions with hidden information
-- Autonomous vehicles in traffic scenarios with uncertainty
-- Military strategy simulations
+- AI research benchmarking for imperfect-information games
+- Algorithm robustness testing across different game structures
+- Development of game-playing AI for card games
+- Academic comparison of reinforcement learning and game theory approaches
 
 ---
 
-### 10. 10. Speculative Speculative Decoding
+### 5. 5. Using Learning Progressions to Guide AI Feedback for Science Learning
 
-- **arXiv:** [2603.03251v1](https://arxiv.org/abs/2603.03251v1) | [PDF](https://arxiv.org/pdf/2603.03251v1)
+- **arXiv:** [2603.03249v1](https://arxiv.org/abs/2603.03249v1) | [PDF](https://arxiv.org/pdf/2603.03249v1)
 - **Published:** ** 2026-03-03
-- **Category:** method (llms)
-- **Tags:** inference_acceleration, speculative_decoding, parallel_computation, efficiency, autoregressive_models, token_prediction
+- **Category:** application (generative_models)
+- **Tags:** ai_education, learning_progressions, formative_feedback, rubric_generation, science_learning, educational_ai
 
 **Summary:**
-This paper introduces Speculative Speculative Decoding (SSD), a novel method that parallelizes the traditionally sequential operations of speculation and verification in speculative decoding. By allowing multiple speculative steps to run simultaneously rather than waiting for each verification to complete, SSD reduces the overhead associated with the sequential nature of standard speculative decoding. The approach maintains output quality while significantly improving inference speed for large language models.
+This paper explores using Learning Progressions (LPs) - theoretical frameworks representing how students develop understanding over time - to generate AI feedback rubrics for science learning, instead of relying on time-consuming expert-authored rubrics. The study investigates whether an LP-driven approach can effectively guide generative AI to provide formative feedback that supports student learning.
 
 **Implementation:**
-SSD parallelizes speculation and verification by running multiple draft prediction rounds concurrently instead of sequentially. It uses a fast draft model to predict upcoming tokens and a slower target model to verify them, but does so in a pipelined fashion where new speculations can begin before previous verifications complete. The method maintains the same token-level output distribution as standard speculative decoding while eliminating the sequential bottleneck between speculation and verification phases.
+The research examines an LP-driven rubric generation pipeline that leverages learning progressions as a theoretically grounded framework to guide AI feedback generation. Learning progressions provide a sequential representation of student understanding development in a domain, which can be used to create rubrics without requiring extensive expert authoring for each specific task. The approach aims to improve scalability of AI-generated formative feedback across different instructional contexts.
 
 **Applications:**
-- Accelerating LLM inference in chatbots and virtual assistants
-- Reducing latency in real-time text generation applications
-- Improving throughput in large-scale language model serving
-- Enabling faster responses in code completion and generation tools
+- K-12 science education formative feedback
+- Personalized AI tutoring systems for science subjects
+- Automated assessment in science curricula
+- Teacher support tools for differentiated instruction
+
+---
+
+### 6. 6. Density-Guided Response Optimization: Community-Grounded Alignment via Implicit Acceptance Signals
+
+- **arXiv:** [2603.03242v1](https://arxiv.org/abs/2603.03242v1) | [PDF](https://arxiv.org/pdf/2603.03242v1)
+- **Published:** ** 2026-03-03
+- **Category:** method (llms)
+- **Tags:** alignment, response-optimization, community-grounded, implicit-signals, density-guidance, preference-modeling, social-norms, language-model-alignment
+
+**Summary:**
+This paper proposes a method called Density-Guided Response Optimization that enables language models to align with online community norms without requiring explicit preference labels or costly annotation infrastructure. Instead of relying on traditional preference supervision, the approach uses implicit acceptance signals from community interactions to guide model alignment.
+
+**Implementation:**
+The method leverages density estimation techniques to identify implicitly accepted responses within community data. By modeling the distribution of community-grounded acceptance signals (rather than explicit binary preferences), the approach can learn from communities that lack formal annotation infrastructure or organized preference data. This density-based framework allows optimization without explicit preference supervision.
+
+**Applications:**
+- Adapting AI assistants to niche subreddit communities
+- Aligning models with cultural and domain-specific online community norms
+- Serving communities with sensitive topics where explicit preference collection is ethically fraught
+- Enabling alignment for under-resourced communities lacking annotation infrastructure
+
+---
+
+### 7. 7. UniG2U-Bench: Do Unified Models Advance Multimodal Understanding?
+
+- **arXiv:** [2603.03241v1](https://arxiv.org/abs/2603.03241v1) | [PDF](https://arxiv.org/pdf/2603.03241v1)
+- **Published:** ** 2026-03-03
+- **Category:** benchmark (multimodal)
+- **Tags:** multimodal, benchmark, evaluation, unified_models, generation, understanding, visual_transformation, G2U
+
+**Summary:**
+UniG2U-Bench is a benchmark designed to evaluate whether unified multimodal models improve understanding through generation capabilities. It categorizes evaluation into 7 regimes and 30 subtasks that require varying degrees of visual transformation, addressing the gap in understanding when and how generation helps comprehension.
+
+**Implementation:**
+The benchmark organizes G2U (generation-to-understanding) evaluation into 7 distinct regimes covering 30 subtasks. It systematically tests implicit and explicit visual transformation tasks to determine if generative capabilities in unified multimodal models actually enhance their understanding abilities, rather than just assuming more parameters or generation equals better understanding.
+
+**Applications:**
+- Visual question answering systems
+- Image captioning and description tools
+- Multimodal AI assistants
+- Document understanding and visual reasoning
+- Accessibility tools for visually impaired users
+- Autonomous vehicle perception systems
+
+---
+
+### 8. 8. AI-for-Science Low-code Platform with Bayesian Adversarial Multi-Agent Framework
+
+- **arXiv:** [2603.03233v1](https://arxiv.org/abs/2603.03233v1) | [PDF](https://arxiv.org/pdf/2603.03233v1)
+- **Published:** ** 2026-03-03
+- **Category:** architecture (agents)
+- **Tags:** ai-for-science, low-code-platform, multi-agent-framework, bayesian-methods, llm, scientific-code-generation, adversarial-learning, task-automation
+
+**Summary:**
+This paper introduces a Low-code Platform (LCP) that uses a Bayesian adversarial multi-agent framework to help Large Language Models (LLMs) generate scientific code more reliably. The platform addresses challenges like error propagation and evaluation in complex scientific domains by coordinating three LLM-based agents under a Bayesian framework.
+
+**Implementation:**
+Three LLM-based agents coordinated under a Bayesian framework: a Task Manager for structuring user inputs, and two additional agents (specific roles not fully detailed in abstract). The framework is designed to handle ill-defined success metrics in scientific domains and mitigate error propagation in multi-agent workflows.
+
+**Applications:**
+- Automated scientific code generation
+- AI for Science (AI4S) research workflows
+- Domain-specific scientific computing tasks
+
+---
+
+### 9. 9. SynthCharge: An Electric Vehicle Routing Instance Generator with Feasibility Screening to Enable Learning-Based Optimization and Benchmarking
+
+- **arXiv:** [2603.03230v1](https://arxiv.org/abs/2603.03230v1) | [PDF](https://arxiv.org/pdf/2603.03230v1)
+- **Published:** ** 2026-03-03
+- **Category:** benchmark (robotics)
+- **Tags:** electric_vehicle_routing, benchmark_generation, EVRPTW, feasibility_screening, instance_generator, learning_based_optimization, time_windows
+
+**Summary:**
+SynthCharge is a new generator that creates test problems for electric vehicle routing with time windows, addressing the issue that existing test datasets are static and often impractical. It automatically screens generated problems to ensure they can actually be solved, helping researchers better evaluate and compare new routing algorithms.
+
+**Implementation:**
+['Parametric generator for EVRPTW instances with battery capacity and charging station constraints', 'Feasibility screening to ensure instances are solvable before distribution', 'Produces diverse instances across varying spatiotemporal configurations', 'Scalable customer counts for different problem sizes', 'Addresses reproducibility issues in learning-based routing model evaluation']
+
+**Applications:**
+- Electric vehicle fleet scheduling and route optimization
+- Logistics and delivery service planning
+- Urban delivery systems with charging infrastructure
+- Autonomous EV navigation systems
+
+---
+
+### 10. 10. Stabilized Adaptive Loss and Residual-Based Collocation for Physics-Informed Neural Networks
+
+- **arXiv:** [2603.03224v1](https://arxiv.org/abs/2603.03224v1) | [PDF](https://arxiv.org/pdf/2603.03224v1)
+- **Published:** ** 2026-03-03
+- **Category:** method (None)
+- **Tags:** physics_informed_neural_networks, partial_differential_equations, numerical_methods, scientific_computing, mesh_free_methods, collocation_methods
+
+**Summary:**
+This paper addresses limitations of Physics-Informed Neural Networks (PINNs) when solving stiff or shock-dominated partial differential equations, where traditional PINNs suffer from unbalanced training and solution inaccuracy. The researchers propose a stabilized adaptive loss approach combined with residual-based collocation points to improve training stability and accuracy.
+
+**Implementation:**
+["Viscous Burgers' equation used as test case", 'Residual-based adaptive collocation point selection', 'Stabilized adaptive loss weighting mechanism', 'Mesh-free approach for PDE solving', 'Addresses stiff and shock-dominated dynamics challenges']
+
+**Applications:**
+- Computational fluid dynamics
+- Fluid mechanics simulations
+- Shock wave modeling
+- Complex PDE solving in engineering
 
 ---
 
