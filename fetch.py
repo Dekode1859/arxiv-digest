@@ -159,7 +159,8 @@ def main():
     output_dir = Path(config.get("output_dir", "papers"))
     output_dir.mkdir(exist_ok=True)
     
-    output_file = output_dir / f"{date_str}.md"
+    filename = config.get("output_filename", "arxiv-digest-{date}").format(date=date_str)
+    output_file = output_dir / filename
     output_file.write_text(md_content)
     
     print(f"\n✅ Saved to: {output_file}")
@@ -167,7 +168,8 @@ def main():
     # Copy to SilverBullet if configured
     sb_space = config.get("silverbullet_space")
     if sb_space:
-        sb_path = Path(sb_space) / f"{date_str}.md"
+        filename = config.get("output_filename", "arxiv-digest-{date}").format(date=date_str)
+        sb_path = Path(sb_space) / filename
         sb_path.write_text(md_content)
         print(f"✅ Copied to SilverBullet: {sb_path}")
     

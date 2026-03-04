@@ -6,14 +6,41 @@ categories: cs.AI, cs.LG, cs.CL, stat.ML
 # Max papers to fetch per run
 max_papers: 10
 
-# Output directory for markdown files
-output_dir: papers
-
-# Sort by: submittedDate (most recent) or relevance
-sort_by: submittedDate
-
-# arxiv API settings
-arxiv_base_url: http://export.arxiv.org/api/query
+# Output filename pattern (use {date} for date)
+output_filename: "arxiv-digest-{date}.md"
 
 # SilverBullet space path (auto-copy to SilverBullet if set)
 silverbullet_space: /var/lib/docker/volumes/silverbullet_silverbullet_space/_data
+
+# LLM Configuration
+llm:
+  # Ollama model to use
+  model: "minimax-m2.5:cloud"
+  
+  # Temperature for summarization (0 = factual, 0.7 = creative)
+  temperature: 0.3
+
+# Focus areas for subcategory detection (ordered by priority)
+focus_areas:
+  - agents
+  - llms
+  - fine_tuning
+  - benchmarking
+  - evaluation
+  - reasoning
+  - multimodal
+  - computer_vision
+  - nlp
+  - robotics
+  - reinforcement_learning
+  - generative_models
+
+# Main categories (extensible)
+main_categories:
+  - architecture
+  - benchmark
+  - method
+  - dataset
+  - application
+  - theory
+  - survey
